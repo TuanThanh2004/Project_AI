@@ -122,14 +122,14 @@ while running:
                     clusters.append(random_point)
             #algorithm
             if 700 < mouse_x < 940 and 400 < mouse_y < 440:
-                #try:
+                try:
                     from sklearn.cluster import KMeans
 
                     kmeans = KMeans(n_clusters=K).fit(points) #dòng đã làm tự động random và run
                     labels = kmeans.predict(points)
                     clusters = kmeans.cluster_centers_
-                #except:
-                #    print("error")
+                except:
+                    print("error")
 
             #reset
             if 700 < mouse_x < 920 and 500 < mouse_y <540:
